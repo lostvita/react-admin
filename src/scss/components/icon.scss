@@ -1,0 +1,437 @@
+@import './_font.scss';
+
+$icon-prefix: 'icon-';
+
+
+.#{$icon-prefix}subtract-fill1:before {
+  content: "\e900";
+}
+.#{$icon-prefix}table:before {
+  content: "\e901";
+}
+.#{$icon-prefix}tag:before {
+  content: "\e902";
+}
+.#{$icon-prefix}tag-fill:before {
+  content: "\e903";
+}
+.#{$icon-prefix}tools:before {
+  content: "\e904";
+}
+.#{$icon-prefix}tools-fill:before {
+  content: "\e905";
+}
+.#{$icon-prefix}unlock:before {
+  content: "\e906";
+}
+.#{$icon-prefix}unlock-fill:before {
+  content: "\e907";
+}
+.#{$icon-prefix}unlock-fill1:before {
+  content: "\e908";
+}
+.#{$icon-prefix}up:before {
+  content: "\e909";
+}
+.#{$icon-prefix}up1:before {
+  content: "\e90a";
+}
+.#{$icon-prefix}up2:before {
+  content: "\e90b";
+}
+.#{$icon-prefix}up3:before {
+  content: "\e90c";
+}
+.#{$icon-prefix}updown:before {
+  content: "\e90d";
+}
+.#{$icon-prefix}updown1:before {
+  content: "\e90e";
+}
+.#{$icon-prefix}upload:before {
+  content: "\e90f";
+}
+.#{$icon-prefix}user:before {
+  content: "\e910";
+}
+.#{$icon-prefix}user-fill:before {
+  content: "\e911";
+}
+.#{$icon-prefix}visible:before {
+  content: "\e912";
+}
+.#{$icon-prefix}wrong:before {
+  content: "\e913";
+}
+.#{$icon-prefix}wrong1:before {
+  content: "\e914";
+}
+.#{$icon-prefix}wrong-fill:before {
+  content: "\e915";
+}
+.#{$icon-prefix}add-doc:before {
+  content: "\e916";
+}
+.#{$icon-prefix}add-doc-fill:before {
+  content: "\e917";
+}
+.#{$icon-prefix}add-more:before {
+  content: "\e918";
+}
+.#{$icon-prefix}add:before {
+  content: "\e919";
+}
+.#{$icon-prefix}add1:before {
+  content: "\e91a";
+}
+.#{$icon-prefix}add2:before {
+  content: "\e91b";
+}
+.#{$icon-prefix}add-fill:before {
+  content: "\e91c";
+}
+.#{$icon-prefix}add-fill1:before {
+  content: "\e91d";
+}
+.#{$icon-prefix}addmore-fill:before {
+  content: "\e91e";
+}
+.#{$icon-prefix}affix:before {
+  content: "\e91f";
+}
+.#{$icon-prefix}andorid-fill:before {
+  content: "\e920";
+}
+.#{$icon-prefix}bad:before {
+  content: "\e921";
+}
+.#{$icon-prefix}bad-fill:before {
+  content: "\e922";
+}
+.#{$icon-prefix}camera:before {
+  content: "\e923";
+}
+.#{$icon-prefix}camera-fill:before {
+  content: "\e924";
+}
+.#{$icon-prefix}chart:before {
+  content: "\e925";
+}
+.#{$icon-prefix}chart1:before {
+  content: "\e926";
+}
+.#{$icon-prefix}chart2:before {
+  content: "\e927";
+}
+.#{$icon-prefix}chart3:before {
+  content: "\e928";
+}
+.#{$icon-prefix}chart4:before {
+  content: "\e929";
+}
+.#{$icon-prefix}chart-fill:before {
+  content: "\e92a";
+}
+.#{$icon-prefix}check:before {
+  content: "\e92b";
+}
+.#{$icon-prefix}clock:before {
+  content: "\e92c";
+}
+.#{$icon-prefix}clock-fill:before {
+  content: "\e92d";
+}
+.#{$icon-prefix}coin-fill:before {
+  content: "\e92e";
+}
+.#{$icon-prefix}computer:before {
+  content: "\e92f";
+}
+.#{$icon-prefix}date:before {
+  content: "\e930";
+}
+.#{$icon-prefix}date-fill:before {
+  content: "\e931";
+}
+.#{$icon-prefix}delete:before {
+  content: "\e932";
+}
+.#{$icon-prefix}delete-fill:before {
+  content: "\e933";
+}
+.#{$icon-prefix}doc:before {
+  content: "\e934";
+}
+.#{$icon-prefix}down:before {
+  content: "\e935";
+}
+.#{$icon-prefix}down1:before {
+  content: "\e936";
+}
+.#{$icon-prefix}down2:before {
+  content: "\e937";
+}
+.#{$icon-prefix}down3:before {
+  content: "\e938";
+}
+.#{$icon-prefix}download:before {
+  content: "\e939";
+}
+.#{$icon-prefix}earth:before {
+  content: "\e93a";
+}
+.#{$icon-prefix}edit:before {
+  content: "\e93b";
+}
+.#{$icon-prefix}email:before {
+  content: "\e93c";
+}
+.#{$icon-prefix}excalmatory:before {
+  content: "\e93d";
+}
+.#{$icon-prefix}excalmatory-fill:before {
+  content: "\e93e";
+}
+.#{$icon-prefix}exit:before {
+  content: "\e93f";
+}
+.#{$icon-prefix}filter:before {
+  content: "\e940";
+}
+.#{$icon-prefix}filter-fill:before {
+  content: "\e941";
+}
+.#{$icon-prefix}flag:before {
+  content: "\e942";
+}
+.#{$icon-prefix}flag-fill:before {
+  content: "\e943";
+}
+.#{$icon-prefix}folder:before {
+  content: "\e944";
+}
+.#{$icon-prefix}good:before {
+  content: "\e945";
+}
+.#{$icon-prefix}good-fill:before {
+  content: "\e946";
+}
+.#{$icon-prefix}handphone:before {
+  content: "\e947";
+}
+.#{$icon-prefix}handphone-fill:before {
+  content: "\e948";
+}
+.#{$icon-prefix}heard-fill:before {
+  content: "\e949";
+}
+.#{$icon-prefix}heart:before {
+  content: "\e94a";
+}
+.#{$icon-prefix}home:before {
+  content: "\e94b";
+}
+.#{$icon-prefix}home-fill:before {
+  content: "\e94c";
+}
+.#{$icon-prefix}information:before {
+  content: "\e94d";
+}
+.#{$icon-prefix}information-fill:before {
+  content: "\e94e";
+}
+.#{$icon-prefix}invisible:before {
+  content: "\e94f";
+}
+.#{$icon-prefix}ios-fill:before {
+  content: "\e950";
+}
+.#{$icon-prefix}layers:before {
+  content: "\e951";
+}
+.#{$icon-prefix}left2:before {
+  content: "\e952";
+}
+.#{$icon-prefix}left3:before {
+  content: "\e953";
+}
+.#{$icon-prefix}list-setting:before {
+  content: "\e954";
+}
+.#{$icon-prefix}list:before {
+  content: "\e955";
+}
+.#{$icon-prefix}list2:before {
+  content: "\e956";
+}
+.#{$icon-prefix}list3:before {
+  content: "\e957";
+}
+.#{$icon-prefix}list-fill:before {
+  content: "\e958";
+}
+.#{$icon-prefix}list-fill1:before {
+  content: "\e959";
+}
+.#{$icon-prefix}loading:before {
+  content: "\e95a";
+}
+.#{$icon-prefix}location:before {
+  content: "\e95b";
+}
+.#{$icon-prefix}location-fill:before {
+  content: "\e95c";
+}
+.#{$icon-prefix}lock:before {
+  content: "\e95d";
+}
+.#{$icon-prefix}lock-fill:before {
+  content: "\e95e";
+}
+.#{$icon-prefix}lock-fill1:before {
+  content: "\e95f";
+}
+.#{$icon-prefix}logout:before {
+  content: "\e960";
+}
+.#{$icon-prefix}mail-fill:before {
+  content: "\e961";
+}
+.#{$icon-prefix}map:before {
+  content: "\e962";
+}
+.#{$icon-prefix}menu-close:before {
+  content: "\e963";
+}
+.#{$icon-prefix}menu-open:before {
+  content: "\e964";
+}
+.#{$icon-prefix}menu:before {
+  content: "\e965";
+}
+.#{$icon-prefix}menu1:before {
+  content: "\e966";
+}
+.#{$icon-prefix}message:before {
+  content: "\e967";
+}
+.#{$icon-prefix}message-fill:before {
+  content: "\e968";
+}
+.#{$icon-prefix}money:before {
+  content: "\e969";
+}
+.#{$icon-prefix}money1:before {
+  content: "\e96a";
+}
+.#{$icon-prefix}money-fill:before {
+  content: "\e96b";
+}
+.#{$icon-prefix}money-fill1:before {
+  content: "\e96c";
+}
+.#{$icon-prefix}more:before {
+  content: "\e96d";
+}
+.#{$icon-prefix}more1:before {
+  content: "\e96e";
+}
+.#{$icon-prefix}news:before {
+  content: "\e96f";
+}
+.#{$icon-prefix}news-fill:before {
+  content: "\e970";
+}
+.#{$icon-prefix}phone:before {
+  content: "\e971";
+}
+.#{$icon-prefix}phone1:before {
+  content: "\e972";
+}
+.#{$icon-prefix}phone-fill:before {
+  content: "\e973";
+}
+.#{$icon-prefix}phone-fill1:before {
+  content: "\e974";
+}
+.#{$icon-prefix}pic:before {
+  content: "\e975";
+}
+.#{$icon-prefix}pic-fill:before {
+  content: "\e976";
+}
+.#{$icon-prefix}question:before {
+  content: "\e977";
+}
+.#{$icon-prefix}question-fill:before {
+  content: "\e978";
+}
+.#{$icon-prefix}refresh:before {
+  content: "\e979";
+}
+.#{$icon-prefix}right:before {
+  content: "\e97a";
+}
+.#{$icon-prefix}right1:before {
+  content: "\e97b";
+}
+.#{$icon-prefix}right2:before {
+  content: "\e97c";
+}
+.#{$icon-prefix}right3:before {
+  content: "\e97d";
+}
+.#{$icon-prefix}right-fill:before {
+  content: "\e97e";
+}
+.#{$icon-prefix}rocket:before {
+  content: "\e97f";
+}
+.#{$icon-prefix}rocket-fill:before {
+  content: "\e980";
+}
+.#{$icon-prefix}search:before {
+  content: "\e981";
+}
+.#{$icon-prefix}setting:before {
+  content: "\e982";
+}
+.#{$icon-prefix}setting-fill:before {
+  content: "\e983";
+}
+.#{$icon-prefix}share:before {
+  content: "\e984";
+}
+.#{$icon-prefix}share-fill:before {
+  content: "\e985";
+}
+.#{$icon-prefix}slash:before {
+  content: "\e986";
+}
+.#{$icon-prefix}star:before {
+  content: "\e987";
+}
+.#{$icon-prefix}star-fill:before {
+  content: "\e988";
+}
+.#{$icon-prefix}subtract:before {
+  content: "\e989";
+}
+.#{$icon-prefix}subtract1:before {
+  content: "\e98a";
+}
+.#{$icon-prefix}subtract2:before {
+  content: "\e98b";
+}
+.#{$icon-prefix}subtract-fill:before {
+  content: "\e98c";
+}
+.#{$icon-prefix}drag:before {
+  content: "\e98d";
+}
+.#{$icon-prefix}add3:before {
+  content: "\e98e";
+}
+.#{$icon-prefix}caidan:before {
+  content: "\e738";
+}
