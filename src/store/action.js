@@ -3,7 +3,7 @@ export const doLogin = user => ({
     user
 })
 
-export const updateSideBarState = key => ({
+export const updateSidebarState = key => ({
     type: 'UPDATE',
     key
 })

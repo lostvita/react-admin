@@ -1,28 +1,30 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import DocumentTitle from 'react-document-title'
 
 import App from 'App'
-import asyncComponent from 'components/AsyncComponent'
+import AsyncComponent from 'components/AsyncComponent'
 
-const Login = asyncComponent(() => import(/* webpackChunkName: "login" */ 'views/Login'))
-const NotFound = asyncComponent(() => import(/* webpackChunkName: "404" */ 'components/404'))
+const Login = AsyncComponent(() => import(/* webpackChunkName: "login" */ 'views/login'))
+const NotFound = AsyncComponent(() => import(/* webpackChunkName: "404" */ 'components/404'))
+const AuthError = AsyncComponent(() => import(/* webpackChunkName: "autherror" */ 'components/AuthError'))
 
-export default () => {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path="/" render={ () => <Redirect to="/front/home" push /> } />
-                <Route path="/front/login" render={ () => {
-                    const isLogin = false
-                    return isLogin ?  <Redirect to="/front/home" /> : 
-                        <DocumentTitle title="React Admin Sys">
-                            <Login />
-                        </DocumentTitle>
-                } } />
-                <Route path="/front/404" component={ NotFound } />
-                <Route render={ () => <App /> } />
-            </Switch>
-        </Router>
-    )
+class Page extends Component {
+    render () {
+        return (
+            <Router>
+                <Switch>
+                    <Route exact path="/" render={ () => <Redirect to="/front/approval/undo" push /> } />
+                    <Route path="/front/404" component={ NotFound }/>
+                    <Route path="/front/autherror" component={ AuthError } />
+                    <Route path="/front/login" render={ () => {
+                        const isLogin = false
+                        return isLogin ?  <Redirect to="/front/approval/undo" /> : <Login />
+                    } } />
+                    <Route render={ () => <App /> } />
+                </Switch>
+            </Router>
+        )
+    }
 }
+
+export default Page

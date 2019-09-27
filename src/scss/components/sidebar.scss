@@ -1,15 +1,15 @@
-.menu-wrapper{
+.sidebar{
     width: 100%;
-    height: calc(100vh - 0px);
+    height: calc(100vh - 0px); /* 预留系统logo */
     overflow-x: hidden;
     overflow-y: auto;
-}
 
-.menu{
-    width: 100%;
+    &-wrapper{
+        width: 100%;
+    }
 
     &-item{
-        line-height: 60px;
+        line-height: 55px;
         cursor: pointer;
 
         &-name{
@@ -19,24 +19,26 @@
             padding: 0 10px;
             color: #bfcbd9;
 
+            &:hover{
+                color: #20a0ff;
+            }
+
             &>i{
                 margin-right: 10px;
                 font-size: 18px;
             }
 
-            &:hover{
-                color: #20a0ff;
-            }
+            
 
             &.on{
-                color: #20a0ff;
-                &+.menu-sub{ display: block; }
+                color: #fff;
+                &+.sidebar-sub{ display: block; }
             }
         }
 
-        &>.menu-sub{
-            background-color: #1f2d3d;
-            border-left: 2px solid #20a0ff;
+        &>.sidebar-sub{
+            background: linear-gradient(45deg, #1f2d3d, transparent);
+            border-left: 2px solid #1b7fbd;
         }
     }
 
@@ -47,8 +49,14 @@
         &-item{
             position: relative;
             padding: 0 20px;
-            line-height: 50px;
-            .menu-sub-item{
+            line-height: 45px;
+
+            &:hover{
+                color: #20a0ff;
+                background-color: #1f2d3d;
+            }
+
+            .sidebar-sub-item{
                 &:before{
                     content: '';
                     position: absolute;
@@ -60,10 +68,6 @@
                     border-radius: 2px;
                     background-color: #fff;
                 }
-            }
-
-            &:hover{
-                color: #20a0ff;
             }
 
             &>a{
@@ -78,7 +82,7 @@
             &>.active{
                 color: #20a0ff;
             }
-            &>.menu-item-name{
+            &>.sidebar-item-name{
                 justify-content: flex-start;
                 padding: 0;
             }

@@ -1,8 +1,8 @@
-import asyncComponent from 'components/AsyncComponent'
+import AsyncComponent from 'components/AsyncComponent'
 
-const Home = asyncComponent(() => import(/* webpackChunkName: "home" */ 'views/Home'))
-const About = asyncComponent(() => import(/* webpackChunkName: "about" */ 'views/About'))
+const ApprovalUndo = AsyncComponent(() => import(/* webpackChunkName: "approvalundo" */ 'views/approval/undo'))
+const ApprovalDone = AsyncComponent(() => import(/* webpackChunkName: "approvaldone" */ 'views/approval/done'))
 
 export default {
-    Home, About
+    ApprovalUndo, ApprovalDone
 }

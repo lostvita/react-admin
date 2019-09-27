@@ -1,13 +1,13 @@
 /**
- * 插槽组件
+ * 插槽
  */
 
-import { Component } from 'react'
+ import { Component } from 'react'
 
-class Slot extends Component {
-    render () {
-        return this.props.children
-    }
-}
+ class Slot extends Component {
+     render () {
+         return this.props.children
+     }
+ }
 
-export default Slot
+ export default Slot

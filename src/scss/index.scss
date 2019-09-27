@@ -16,6 +16,23 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+::-webkit-scrollbar{
+    width: 9px;
+    height: 9px;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-button{
+    display: none;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background: rgba(0,0,0,.2);
+}
+::-webkit-scrollbar-track{
+    background: #394a6d;
+}
+
 @import './login.scss';
 @import './components/sidebar.scss';
 @import './components/icon.scss';
@@ -31,10 +48,10 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     flex-direction: column;
     width: 200px;
     height: 100vh;
-    background-color: #324157;
+    background-color: #394a6d;
 }
 
-.main-wrapper{
+.main{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -42,26 +59,26 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     background-color: #f3f3f4;
 }
 
-.main-header{
+.header{
     flex-grow: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 40px;
+    padding: 0 30px;
     background-color: #fff;
 }
 
 .username{
-    margin-right: 20px;
     font-size: 14px;
-    color: #999b9e;
+    color: #35495e;
 }
 
-.main-body{
+.wrapper{
     flex-grow: 1;
 }
 
-.main-footer{
+.footer{
     flex-grow: 0;
     display: flex;
     justify-content: center;
@@ -72,5 +89,5 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 
 .copyright{
     font-size: 12px;
-    color: #999b9e;
+    color: #666;
 }

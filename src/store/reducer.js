@@ -1,19 +1,17 @@
-import { map, pick, keys, reduce } from 'ramda'
+import { map, reduce, pick, keys } from 'ramda'
 import routes from 'router/config'
-
-/**
- * LOGIN reducer
- */
+import { getSessionStore } from 'js/utils'
 
 // user初始值，取自sessionStorage
-const User = window.sessionStorage.user ? JSON.parse(window.sessionStorage.user) : {
+const User = getSessionStore('user') || {
     username: '',
     lastname: '',
     img: '',
     permission: [],
     isAdmin: false
 }
-export const userInfo = (state = User, action) => {
+
+export const user = (state=User, action) => {
     switch (action.type) {
         case 'LOGIN': 
             return pick(keys(state), action.user)
@@ -22,7 +20,29 @@ export const userInfo = (state = User, action) => {
     }
 }
 
-const generateKey = (arr) => {
+const initSidebar = arr => {
+    return map(each => {
+        if(each.routes) {
+            each.active = false
+            each.key = generateKey(each.routes)
+            each.routes = initSidebar(each.routes)
+        }
+        return each
+    }, arr)
+}
+
+const updateSidebar = (arr, key='') => {
+    return map(each => {
+        if(key === each.key) {
+            each.active = !!!each.active
+        } else if(each.routes) {
+            each.routes = updateSidebar(each.routes, key)
+        }
+        return each
+    }, arr)
+}
+
+const generateKey = arr => {
     return reduce((acc, route) => {
         if(route.routes) {
             acc += generateKey(route.routes)
@@ -30,38 +50,13 @@ const generateKey = (arr) => {
             acc += route.path
         }
         return acc
-    }, '')(arr)
+    }, '', arr)
 }
 
-const initSideBar = (arr) => {
-    return map((each) => {
-        if(each.routes) {
-            each.active = false
-            each.key = generateKey(each.routes)
-            initSideBar(each.routes)
-        }
-        return each
-        
-    }, arr)
-}
-
-const SideBars = initSideBar(routes)
-
-const updateSideBar = (arr, key='') => {
-    return map((each) => {
-        if(key === each.key) {
-            each.active = !!!each.active
-        } else if(each.routes) {
-            each.routes = updateSideBar(each.routes, key)
-        }
-        return each
-    }, arr)
-}
-
-export const sideBarInfo = (state=SideBars, action) => {
+export const sidebarInfo = (state=initSidebar(routes), action) => {
     switch (action.type) {
         case 'UPDATE':
-            return updateSideBar(state, action.key)
+            return updateSidebar(state, action.key)
         default:
             return state
     }
