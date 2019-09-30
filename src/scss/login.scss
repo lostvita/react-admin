@@ -22,7 +22,7 @@
         margin: 0;
         text-align: center;
         font-size: 18px;
-        color: #4695d6;
+        color: #3399FF;
         letter-spacing: 2px;
     }
 
@@ -34,7 +34,7 @@
         line-height: 34px;
         font-size: 14px;
         color: #fff;
-        background-color: #20a0ff ;
+        background-color: #3399FF;
         cursor: pointer;
         outline: none;
         border: none;
@@ -42,6 +42,11 @@
 
         &:hover{
             background-color: #4db3ff;
+        }
+
+        &.disabled{
+            background-color: #a0cfff;
+            cursor: not-allowed;
         }
     }
     .common-input{

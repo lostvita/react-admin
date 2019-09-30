@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { prop } from 'ramda'
 
 import SideBar from 'components/SideBar'
 import Routers from 'router'
 
 class App extends Component {
+
 	render () {
 		return (
 			<div className="container">
@@ -12,7 +15,7 @@ class App extends Component {
 				</section>
 				<section className="main">
 					<header className="header">
-						<span className="username">Hi, 安歌</span>
+						<span className="username">Hi, { this.props.user.lastname }</span>
 					</header>
 					<div className="wrapper">
 						<Routers />
@@ -26,4 +29,11 @@ class App extends Component {
 	}
 }
 
-export default App
+const mapStateToProps = (state, owns) => ({
+	user: prop('user', state),
+	...owns
+})
+
+export default connect(
+	mapStateToProps
+)(App)

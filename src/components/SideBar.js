@@ -5,9 +5,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { withRouter } from 'react-router'
-import { map, prop, compose, filter, keys, join, path } from 'ramda'
+import { map, prop, compose, path } from 'ramda'
 
 import { updateSidebarState } from 'store/action'
+import { className } from 'js/utils'
 import Slot from 'components/Slot'
 
 class SideBar extends Component {
@@ -18,7 +19,6 @@ class SideBar extends Component {
             routes: compose(this.checkActive.bind(this), prop('sidebar'))(this.props)
         }
         this.generateSidebar = this.generateSidebar.bind(this)
-        this.className = this.className.bind(this)
     }
 
     render () {
@@ -31,13 +31,22 @@ class SideBar extends Component {
 
     generateSidebar (item) {
         return this.hasPer(item.auth) ? <li className="sidebar-item" key={item.title}>
-            <div className={ this.className({
+            <div className={ className({
                 'sidebar-item-name': true,
                 'on': item.active
             }) } onClick={ this.toggleMenu.bind(this, item.key) }>
-                <span>
+                <span><i className={ className({
+                        'icomoon nav-icon': true,
+                        [item.icon]: !item.active,
+                        [`${item.icon}-fill`]: item.active
+                    }) }></i>
                     { item.title }
                 </span>
+                <i className={ className({
+                    'icomoon': true,
+                    'icon-right2': !item.active,
+                    'icon-down2': item.active
+                }) }></i>
             </div>
             <ul className="sidebar-sub">
                 { this.generateSubMenu(item.routes) }
@@ -49,10 +58,15 @@ class SideBar extends Component {
         return map(each => this.hasPer(each.auth) ? <li className="sidebar-sub-item" key={ each.name }>
             { each.component ? <NavLink to={ each.path } activeClassName="active">{ each.name }</NavLink> : (
                 <Slot>
-                    <div className={ this.className({
+                    <div className={ className({
                         'sidebar-item-name': true,
                         'on': each.active
                     }) }>
+                        <i className={ className({
+                            'icomoon': true,
+                            'icon-right2': !each.active,
+                            'icon-down2': each.active
+                        }) }></i>
                         { each.name }
                     </div>
                     <ul className="sidebar-sub">
@@ -61,11 +75,6 @@ class SideBar extends Component {
                 </Slot>
             ) }
         </li> : null, routes)
-    }
-
-    className (data) {
-        const filterFn = key => !!prop(key, data)
-        return compose(join(' '), filter(filterFn), keys)(data)
     }
 
     toggleMenu (key) {

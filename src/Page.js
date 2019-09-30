@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-
+import { connect } from 'react-redux'
 import App from 'App'
 import AsyncComponent from 'components/AsyncComponent'
 
@@ -17,7 +17,7 @@ class Page extends Component {
                     <Route path="/front/404" component={ NotFound }/>
                     <Route path="/front/autherror" component={ AuthError } />
                     <Route path="/front/login" render={ () => {
-                        const isLogin = false
+                        const isLogin = this.props.user.username
                         return isLogin ?  <Redirect to="/front/approval/undo" /> : <Login />
                     } } />
                     <Route render={ () => <App /> } />
@@ -27,4 +27,11 @@ class Page extends Component {
     }
 }
 
-export default Page
+const mapStateToProps = (state, owns) => ({
+    user: state.user,
+    ...owns
+})
+
+export default connect(
+    mapStateToProps
+)(Page)

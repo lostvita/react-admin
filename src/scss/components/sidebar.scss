@@ -1,4 +1,12 @@
 .sidebar{
+    ::-webkit-scrollbar-thumb{
+        border-radius: 4px;
+        background: rgba(0,0,0,.2);
+    }
+    ::-webkit-scrollbar-track{
+        background: #394a6d;
+    }
+
     width: 100%;
     height: calc(100vh - 0px); /* 预留系统logo */
     overflow-x: hidden;
