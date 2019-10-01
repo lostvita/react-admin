@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react'
 
-import { map } from 'ramda'
-import { className } from 'js/utils'
+import { map, prop } from 'ramda'
+import { className, extractData } from 'js/utils'
+import emitter from 'EventBus'
 
 import Pagination from 'components/Pagination'
 import CommonQuery from 'components/CommonQuery'
 import CommonInput from 'components/CommonInput'
 import CommonTable from 'components/CommonTable'
 import AlignCell from 'components/AlignCell'
-
 class ApprovalUndo extends Component {
     constructor (props) {
         super(props)
@@ -37,71 +37,11 @@ class ApprovalUndo extends Component {
                 applicant_name: '杨过',
                 apply_date: '2019-10-01',
                 status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            },{
-                system: 'AFS',
-                apply_no: 'FW0001190919',
-                apply_type: 'FW',
-                apply_name: '法务合同审批申请',
-                applicant_name: '杨过',
-                apply_date: '2019-10-01',
-                status: 101,
-            }]
+            }],
+            form: {
+                apply_name: '',
+                applicant_name: ''
+            }
         }
     }
     render () {
@@ -118,8 +58,8 @@ class ApprovalUndo extends Component {
                 </div>
                 <div className="view-body">
                     <CommonQuery >
-                        <CommonInput placeholder="申请单名称" />
-                        <CommonInput placeholder="申请人" />
+                        <CommonInput model='form.apply_name' placeholder="申请单名称" />
+                        <CommonInput model='form.applicant_name' placeholder="申请人" />
                     </CommonQuery>
                     <CommonTable>
                         <Fragment key="left-thead">
@@ -193,6 +133,31 @@ class ApprovalUndo extends Component {
             </div>
         )
     }
+    componentDidMount () {
+        emitter.on('form.apply_name', (val) => {
+            const form = prop('form', this.state)
+            this.setState({
+                form: {
+                    apply_name: val,
+                    ...extractData([], ['apply_name'])(form)
+                }
+            })
+        })
+
+        emitter.on('form.applicant_name', (val) => {
+            const form = prop('form', this.state)
+            this.setState({
+                form: {
+                    applicant_name: val,
+                    ...extractData([], ['applicant_name'])(form)
+                }
+            })
+        })
+    }
+    componentWillUnmount () {
+        emitter.off('from.apply_name')
+    }
+    
 }
 
 export default ApprovalUndo
