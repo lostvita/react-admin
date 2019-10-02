@@ -21,7 +21,7 @@ class App extends Component {
 						<Routers />
 					</div>
 					<footer className="footer">
-						<span className="copyright">Copyright@2019 PID.YOUMI</span>
+						<span className="copyright">Copyright@2019 安歌</span>
 					</footer>
 				</section>
 			</div>
