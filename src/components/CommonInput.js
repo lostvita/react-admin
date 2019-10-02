@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import emitter from 'EventBus'
 
 class CommonInput extends Component {
@@ -8,7 +9,7 @@ class CommonInput extends Component {
     }
     render () {
         return (
-            <input type="text" placeholder={ this.props.placeholder } name={ this.props.model } className="common-input" onChange={ this.handleInput } />
+            <input type={ this.props.type } placeholder={ this.props.placeholder } name={ this.props.model } className="common-input" onChange={ this.handleInput } />
         )
     }
     handleInput (evt) {
@@ -16,6 +17,15 @@ class CommonInput extends Component {
         const { name, value } = target
         emitter.emit(name, value)
     }
+}
+
+CommonInput.propTypes = {
+    type: PropTypes.oneOf(['text', 'number']),
+    model: PropTypes.string.isRequired
+}
+
+CommonInput.defaultProps = {
+    type: 'text'
 }
 
 export default CommonInput

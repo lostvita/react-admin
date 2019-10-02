@@ -19,7 +19,7 @@ class ApprovalDone extends Component {
                 </div>
                 <div className="view-body">
                     <CommonQuery >
-                        <CommonInput />
+                        <CommonInput model="form.apply_name" placeholder="申请单" />
                     </CommonQuery>
                 </div>
                 <div className="view-foot">

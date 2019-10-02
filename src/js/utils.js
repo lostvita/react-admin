@@ -32,7 +32,7 @@ export const randomId = len => {
     return id
 }
 
-export const isNaN = val => Number.isNaN ? Number.isNaN(val) : (val !== val)
+export const isNaN = val => Number.isNaN(val)
 
 function _extractData(include, exclude, data) {
     if(include.length > 0) { // ignore exclude

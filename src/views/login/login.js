@@ -31,7 +31,7 @@ class Login extends Component {
         return (
             <section className="login">
                 <div className="login-form">
-                    <h2 className="login-title">统一待办中心</h2>
+                    <h2 className="login-title">登录</h2>
                     <input className="common-input" type="text" name="username" placeholder="帐号" onChange={ this.handleInput } />
                     <input className="common-input" type="password" name="password" placeholder="密码" onChange={ this.handleInput } />
                     <button className={ this.state.btnClass } disabled={ !this.state.canApply } onClick={ this.login }>登录</button>
