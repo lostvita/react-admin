@@ -21,7 +21,7 @@ class CRouter extends Component {
         )
     }
 
-    generateRoute (routes=[], title='统一待办中心') {
+    generateRoute (routes=[], title='React Admin') {
         return map(each => each.component ? (
             <Route 
                 key={ each.path }
