@@ -1,0 +1,2 @@
+(window["webpackJsonpreact-admin"]=window["webpackJsonpreact-admin"]||[]).push([[3],{96:function(e,n,t){"use strict";t.r(n);var r=t(8),a=t(9),i=t(12),c=t(10),o=t(11),s=t(0),u=t.n(s),l=t(49),p=t.n(l),b=function(e){function n(){return Object(r.a)(this,n),Object(i.a)(this,Object(c.a)(n).apply(this,arguments))}return Object(o.a)(n,e),Object(a.a)(n,[{key:"render",value:function(){return u.a.createElement(p.a,{title:"Permission Error"},u.a.createElement("div",null,"Permission Error"))}}]),n}(s.Component);n.default=b}}]);
+//# sourceMappingURL=autherror.6108e273.js.map

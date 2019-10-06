@@ -1,0 +1,2 @@
+(window["webpackJsonpreact-admin"]=window["webpackJsonpreact-admin"]||[]).push([[0],{95:function(n,t,e){"use strict";e.r(t);var a=e(8),c=e(9),r=e(12),i=e(10),u=e(11),o=e(0),d=e.n(o),p=function(n){function t(){return Object(a.a)(this,t),Object(r.a)(this,Object(i.a)(t).apply(this,arguments))}return Object(u.a)(t,n),Object(c.a)(t,[{key:"render",value:function(){return d.a.createElement("div",null,"404 Not Found")}}]),t}(o.Component);t.default=p}}]);
+//# sourceMappingURL=404.416119b7.js.map
