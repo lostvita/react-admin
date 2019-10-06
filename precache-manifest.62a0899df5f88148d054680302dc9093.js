@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ae35dfa8132954c1af4cfc62e786c053",
+    "revision": "9a42c5b528ca6381b0e35fb67da8233e",
     "url": "/react-admin/index.html"
   },
   {
-    "revision": "b82386ffa9becf8e783c",
+    "revision": "b7958461f109bf63e045",
     "url": "/react-admin/static/css/login.807bc366.chunk.css"
   },
   {
@@ -32,16 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-admin/static/js/autherror.6108e273.js"
   },
   {
-    "revision": "b82386ffa9becf8e783c",
-    "url": "/react-admin/static/js/login.05dd6524.js"
+    "revision": "b7958461f109bf63e045",
+    "url": "/react-admin/static/js/login.460e17c6.js"
   },
   {
     "revision": "dbfdfaa3971f9b9cf7c7",
     "url": "/react-admin/static/js/main.baffaaa5.js"
   },
   {
-    "revision": "71cc39673509d98765f1",
-    "url": "/react-admin/static/js/runtime-main.520841b6.js"
+    "revision": "d7647320dd96d8260578",
+    "url": "/react-admin/static/js/runtime-main.88162079.js"
   },
   {
     "revision": "293c5446bee23e0e6bb840c85b938718",
